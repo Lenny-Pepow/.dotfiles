@@ -1,12 +1,13 @@
-{ inputs, lib, ... }:
+{ config, pkgs, inputs, lib, ... }:
 let
 	username = "duque";
 in
 {
-  imports = [
-	../hardware-configuration.nix
+  imports =
+  [
+#    ./hyprland.nix
+    ../hardware-configuration.nix
 	./home.nix
-#	./hyprland.nix
   ];
 
 #hyprland.enable = true;

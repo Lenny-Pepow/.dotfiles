@@ -17,17 +17,16 @@ imports = [
 home = {
 	username = "duque";
 	homeDirectory = "/home/duque";
-
-
 	packages = with pkgs; [
 # terminal apps
 		kitty
 		vim
 		neovim
+		zed-editor
 		lf
 		btop
 		fastfetch
-		zed-editor
+		nerdfonts
 # user apps
 ];
 	sessionVariables = {
