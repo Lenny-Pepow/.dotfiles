@@ -5,7 +5,7 @@ in
 {
   imports =
   [
-#    ./hyprland.nix
+    ./hyprland.nix
     ../hardware-configuration.nix
 	./home.nix
   ];

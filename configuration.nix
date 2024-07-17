@@ -117,12 +117,14 @@ environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   # steam
   programs.steam = {
    enable = true;
+   gamescopeSession.enable = true;
    remotePlay.openFirewall = true;
    dedicatedServer.openFirewall = true;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.gamemode.enable = true; #for gaming
   programs.git.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
