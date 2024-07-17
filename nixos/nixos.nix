@@ -7,7 +7,7 @@ in
   [
     ./hyprland.nix
     ../hardware-configuration.nix
-	./home.nix
+    ./home.nix
   ];
 
 #hyprland.enable = true;
@@ -22,7 +22,7 @@ home-manager = {
   users.${username} = {
 	home.username = username;
 	home.homeDirectory = "/home/${username}";
-	home.stateVersion = "24.05";
+#	home.stateVersion = "24.05";
   };
 };
 

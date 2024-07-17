@@ -1,37 +1,70 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 let
 	username = "duque";
 in
 {
 imports = [
+#    inputs.ags.homeManagerModules.default
+#    ../home-manager/ags.nix
 #	./programs
 #	./scripts
 #	./themes
 ];
 
 home-manager.users.${username} = {
-imports = [
-	../home-manager/cmd.nix
-	../home-manager/git.nix
-];
-home = {
-	username = "duque";
-	homeDirectory = "/home/duque";
-	packages = with pkgs; [
-# terminal apps
-		kitty
-		vim
-		neovim
-		zed-editor
-		lf
-		btop
-		fastfetch
-		nerdfonts
-# user apps
-];
-	sessionVariables = {
-	EDITOR = "nvim";
-};
+	imports = [
+		../home-manager/cmd.nix
+#		../home-manager/starship.nix
+#		../home-manager/tmux.nix
+#		../home-manager/yazi.nix
+		../home-manager/fastfetch.nix
+		../home-manager/git.nix
+#		../home-manager/ags.nix
+#       ../home-manager/browser.nix
+        ../home-manager/hyprland.nix
+	];
+	home = {
+		username = "duque";
+		homeDirectory = "/home/duque";
+		stateVersion = "24.11";
+		packages = with pkgs; [
+				# terminal apps
+			kitty
+			vim
+			neovim
+			zed-editor
+			lf
+			btop
+#			fastfetch
+			nerdfonts
+				# user apps
+    		];
+		sessionVariables = {
+		EDITOR = "nvim";
+		};
+	};
+#	programs = {
+#	   ags = {
+#				enable = true;
+#				configDir = ../ags;
+#				extraPackages = with pkgs; [
+#				    gtksourceview
+#					webkitgtk
+#					accountsservice
+#				];
+#	   };
+#	   bash = {
+#				enable = true;
+#				shellAliases = {
+#				    f = "fastfetch";
+#					n = "nvim";
+#					cd = "z";
+#				};
+#				bashrcExtra = ''
+#					eval "$(zoxide init bash)"
+#				'';
+#	   };
+#	};
 };
 #programs.bash = {
 #	enable = true;
@@ -41,6 +74,5 @@ home = {
 #	};
 #};
 #programs.home-manager.enable = true;
-};
 #home.stateVersion = "24.05";
 }

@@ -12,7 +12,7 @@ inputs = {
 #	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 };
 
-outputs = { self, nixpkgs, home-manager, ... }:
+outputs = { self, nixpkgs, home-manager, ... }@inputs:
 let
 	lib = nixpkgs.lib;
   	system = "x86_64-linux";
@@ -35,6 +35,10 @@ in
 		];
 		};
 	};
+	homeConfigurations.duque = home-manager.lib.homeManagerConfiguration {
+		pkgs = import nixpkgs { inherit system; };
+		extraSpecialArgs = { inherit inputs; };
+		modules = [ ./nixos/home.nix ];
+	};
 };
-
 }
