@@ -7,7 +7,7 @@ home = {
 		yazi
 		fzf
 	];
-};    
+};
 programs = {
 	bash = {
 		enable = true;
@@ -19,6 +19,13 @@ programs = {
 		bashrcExtra = ''
 			eval "$(zoxide init bash)"
 		'';
+	};
+	kitty = {
+	   enable = true;
+	   extraConfig = ''
+			background_opacity 0.5
+			background_blur 2
+	   '';
 	};
 };
 }

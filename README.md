@@ -14,9 +14,6 @@ to do:
 [ ] - configure ags
 [ ] - configure hyprland
 [ ] - configure cmd
+[ ] - configure starship
 [ ] - configure firefox
-[ ] - configure hardware 
-[ ] - configure 
-[ ] - configure 
-[ ] - 
-[ ] - 
+[ ] - configure hardware

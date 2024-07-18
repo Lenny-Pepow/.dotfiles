@@ -15,12 +15,20 @@ environment = {
         pavucontrol #sound manager
         swww #wallpaper daemon
         mangohud #game info
-        protonup
-        obsidian
+        protonup #steam
+        obsidian #notation
+        fragments #bittorrent client
     ];
     sessionVariables = {
         STEAM_EXTRA_COMPAT_TOOLS_PATHS =
             "/home/user/.steam/root/compatibilitytools.d";
     };
+}; #enviroment
+
+programs.hyprland = {
+    enable = true;
+#    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    xwayland.enable = true;
 };
+
 }

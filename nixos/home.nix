@@ -11,18 +11,6 @@ imports = [
 #	./themes
 ];
 
-home-manager.users.${username} = {
-	imports = [
-		../home-manager/cmd.nix
-#		../home-manager/starship.nix
-#		../home-manager/tmux.nix
-#		../home-manager/yazi.nix
-		../home-manager/fastfetch.nix
-		../home-manager/git.nix
-#		../home-manager/ags.nix
-#       ../home-manager/browser.nix
-        ../home-manager/hyprland.nix
-	];
 	home = {
 		username = "duque";
 		homeDirectory = "/home/duque";
@@ -65,7 +53,6 @@ home-manager.users.${username} = {
 #				'';
 #	   };
 #	};
-};
 #programs.bash = {
 #	enable = true;
 #	shellAliases = {
