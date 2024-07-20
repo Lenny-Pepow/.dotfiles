@@ -133,8 +133,6 @@ environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   # $ nix search wget
   environment.systemPackages = [
     # Terminal apps
-    pkgs.kitty
-    pkgs.foot
     pkgs.vim
     pkgs.lf
     pkgs.fastfetch
@@ -150,7 +148,6 @@ environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
     pkgs.swww # wallpaper manager
     pkgs.rofi-wayland
     pkgs.networkmanagerapplet
-    pkgs.dolphin
     pkgs.xfce.thunar
     pkgs.mpv
 	# Drivers

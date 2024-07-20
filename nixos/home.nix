@@ -24,7 +24,11 @@ imports = [
 			lf
 			btop
 #			fastfetch
-			nerdfonts
+			iosevka #monospace font
+			iosevka-comfy.comfy
+			iosevka-comfy.comfy-motion
+			geist-font
+			nerdfonts #icon font
 				# user apps
     		];
 		sessionVariables = {
@@ -41,24 +45,7 @@ imports = [
 #					accountsservice
 #				];
 #	   };
-#	   bash = {
-#				enable = true;
-#				shellAliases = {
-#				    f = "fastfetch";
-#					n = "nvim";
-#					cd = "z";
-#				};
-#				bashrcExtra = ''
-#					eval "$(zoxide init bash)"
-#				'';
-#	   };
-#	};
-#programs.bash = {
-#	enable = true;
-#	shellAliases = {
-#		f = "fastfetch";
-#		n = "vim";
-#	};
+#	;
 #};
 #programs.home-manager.enable = true;
 #home.stateVersion = "24.05";

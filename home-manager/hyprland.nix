@@ -55,7 +55,7 @@ wayland.windowManager.hyprland = {
             "SUPER, D, exec, rofi -show drun"
             ", Print,       ${e} -r 'recorder.screenshot()'"
             "SHIFT, Print,  ${e} -r 'recorder.screenshot(true)'"
-            "SUPER, Return, exec, kitty"
+            "SUPER, Return, exec, foot"
 
             "ALT, Tab, focuscurrentorlast"
             "CTRL ALT, Delete, exit" #exit hyprland session

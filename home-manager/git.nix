@@ -11,7 +11,7 @@ in {
 #github.user = name;
 #push.autoSetupRemote = true;
     };
-    userName = name;
+    userName = "Lenny-Pepow";
     userEmail = "lennymedeiros2022@outlook.com";
   };
 }
