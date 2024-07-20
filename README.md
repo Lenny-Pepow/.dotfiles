@@ -10,10 +10,14 @@ wm = hyprland;
 }
 
 to do:
-[ ] - fix Git
-[ ] - configure ags
-[ ] - configure hyprland
-[ ] - configure cmd
-[ ] - configure starship
-[ ] - configure firefox
-[ ] - configure hardware
+- [ ] fix Git
+- [ ] add more comments
+- [ ] add music software
+- [ ] configure waybar
+- [x] configure hyprland
+  - [ ] add keybinds
+- [ ] configure eww/ags
+- [x] configure cmd
+  - [ ] configure starship
+- [ ] configure navigator
+- [ ] configure hardware
