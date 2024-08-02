@@ -1,13 +1,9 @@
-{
+NixOS .dotfiles repo
 
-description = "Lenny .dotfiles repo";
+Still in development
 
-#Still in development :)
-
-system = nixos;
-wm = hyprland;
-
-}
+wm = Hyprland
+term = Foot
 
 to do:
 - [ ] fix Git
@@ -18,6 +14,5 @@ to do:
   - [ ] add keybinds
 - [ ] configure eww/ags
 - [x] configure cmd
-  - [ ] configure starship
+  - [X] configure starship
 - [ ] configure navigator
-- [ ] configure hardware
