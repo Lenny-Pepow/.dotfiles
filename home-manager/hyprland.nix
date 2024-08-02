@@ -10,7 +10,8 @@ wayland.windowManager.hyprland = {
     xwayland.enable = true;
     settings = {
         exec-once = [
-            "swww-daemon --format xrgb"
+          "swww-daemon --format xrgb"
+          "waybar"
         ];
         monitor = [ ",preferred,auto,1" ];
         general = {
@@ -50,12 +51,21 @@ wayland.windowManager.hyprland = {
             arr = [1 2 3 4 5 6 7 8 9];
 #            fileManager = "firefox";
         in [
+            "SUPER SHIFT, Return, exec, emacsclient -c -a 'emacs'"
+            "SUPER, Return, exec, foot"
             "SUPER, W, exec, firefox"
             "SUPER, E, exec, thunar"
-            "SUPER, D, exec, rofi -show drun"
-            ", Print,       ${e} -r 'recorder.screenshot()'"
-            "SHIFT, Print,  ${e} -r 'recorder.screenshot(true)'"
-            "SUPER, Return, exec, foot"
+              #rofi utils
+            "SUPER, D, exec, rofi -p '[a.a]' -l 32 -show drun"
+            "SUPER, C, exec, ~/.dotfiles/extras/rofi/rofi-bookmarks.sh"
+            "SUPER, P, exec, ~/.dotfiles/extras/rofi/powermenu.sh"
+              #Random Scripts
+            "SUPER, Ç, exec, ~/.dotfiles/extras/random-wallpaper.sh"
+
+            ", Print,  exec, ~/.dotfiles/extras/screenshot-selection-clipboard.sh"
+            "ALT, Print,  exec, ~/.dotfiles/extras/screenshot-selection.sh"
+            "SHIFT, Print,  exec, grim - | wl-copy"
+            "SHIFT ALT, Print,  exec, grim"
 
             "ALT, Tab, focuscurrentorlast"
             "CTRL ALT, Delete, exit" #exit hyprland session

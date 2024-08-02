@@ -3,9 +3,28 @@
 #home-manager.users.${username} =
 home = {
 	packages = with pkgs; [
-		zoxide
-		yazi
-		fzf
+		dipc #applies themes to images
+        #utilities
+        ffmpeg #video tool
+        imagemagick #image convertion
+		unzip
+		zip
+		tldr
+        eva #calculator
+        gdu #disk analizer
+		dust #disk analizer
+		#clones
+		zoxide #cd clone
+		eza #ls clone
+		bat #cat clone
+		ripgrep #grep clone
+		fd #find clone
+		prox #ps clone
+		#misc
+        neo #matrix-like falling characters
+        colorpanes #displays term colors $colp
+        piper-tts #light-weight text-to-speech tool
+        alsa-utils
 	];
 };
 # by adding the "package" option programs can instaled directly in home-manager
@@ -13,9 +32,17 @@ programs = {
 	bash = {
 		enable = true;
 		shellAliases = {
-			f = "fastfetch";
+              f = "fastfetch";
 			n = "nvim";
 			cd = "z";
+			cat = "bat";
+            find = "fd";
+            fzf = "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"; #fzf preview with BAT
+			ls = "eza -1 -X -T -L 1 -s modified";
+			lt = "eza -1 -X -T -L 3 -s modified";
+			svr = "neo -D -c yellow -d 2 -G 2 -g 100,200 --charset=ascii";
+			svr-dirtyhands = "neo -D -c yellow -d 2 -G 2 -g 100,200 --charset=ascii -m 'People without dirty hands are wrong.'";
+			rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles";
 		};
 		bashrcExtra = ''
 			eval "$(zoxide init bash)"
@@ -71,5 +98,11 @@ programs = {
 	       (setq standard-indent 2)
 	   '';
 	};
+	fzf = {
+	   enable = true;
+	   package = pkgs.fzf;
+       enableBashIntegration = true;
+    };
+    bat.enable = true;
 };
 }

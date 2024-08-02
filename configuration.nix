@@ -125,7 +125,6 @@ environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   # Install firefox.
   programs.firefox.enable = true;
   programs.gamemode.enable = true; #for gaming
-  programs.git.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -133,9 +132,6 @@ environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
   # $ nix search wget
   environment.systemPackages = [
     # Terminal apps
-    pkgs.vim
-    pkgs.lf
-    pkgs.fastfetch
     # Sistem and Hyprland
     pkgs.waybar
 	(pkgs.waybar.overrideAttrs (oldAttrs: {
@@ -145,10 +141,7 @@ environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
     pkgs.home-manager
     pkgs.dunst # notifications
     pkgs.libnotify # dusnt needs
-    pkgs.swww # wallpaper manager
-    pkgs.rofi-wayland
     pkgs.networkmanagerapplet
-    pkgs.xfce.thunar
     pkgs.mpv
 	# Drivers
 

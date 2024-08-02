@@ -9,6 +9,7 @@ in
     ../hardware-configuration.nix
   ];
 
+nixpkgs.config.allowUnfree = true;
 programs.hyprland.enable = true;
 users.users.${username} = {
 	isNormalUser = true;
@@ -25,17 +26,20 @@ home-manager = {
 	home.homeDirectory = "/home/${username}";
 	home.stateVersion = "24.11";
     imports = [
+#        ../home-manager/ags.nix
+        ../home-manager/browser.nix
         ../home-manager/cmd.nix
-#        ../home-manager/starship.nix
-#        ../home-manager/tmux.nix
-#        ../home-manager/yazi.nix
         ../home-manager/fastfetch.nix
         ../home-manager/git.nix
-#        ../home-manager/browser.nix
         ../home-manager/hyprland.nix
+        ../home-manager/neovim.nix
+        ../home-manager/rofi.nix
+        ../home-manager/starship.nix
+#        ../home-manager/tmux.nix
+        ../home-manager/waybar.nix
+        ../home-manager/yazi.nix
         ./home.nix
     ];
   };
 };
-
 }

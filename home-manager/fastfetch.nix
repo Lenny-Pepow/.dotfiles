@@ -21,6 +21,7 @@ programs.fastfetch = {
         "os"
         "packages"
         "disk"
+        "uptime"
 #        "colors"
       ];
     };

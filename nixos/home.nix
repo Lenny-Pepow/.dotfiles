@@ -18,8 +18,6 @@ imports = [
 		packages = with pkgs; [
 				# terminal apps
 			kitty
-			vim
-			neovim
 			zed-editor
 			lf
 			btop
